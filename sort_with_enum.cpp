@@ -78,7 +78,18 @@ int main()
     std::cout << std::endl;
 
     Option option;
-    option.strategy = selection;
+    int x;
+    std::cin >> x;
+    
+    switch(x)
+    {
+        case 1:
+            option.strategy = bubble;
+            break;
+        default:
+            option.strategy = selection;
+    }
+    
     sort(option, arr, size);
     option.f_ptr(arr, size);
 
